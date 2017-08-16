@@ -4,7 +4,7 @@
     и аргументы, который также привязываются к функции.
 
     ПРИМЕР:
-    
+
     let person = { firstname: 'Brendan', lastname: 'Eich' };
 
     function print() {
@@ -18,8 +18,6 @@
     printPerson(); // { firstname: 'Brendan', lastname: 'Eich' }
 */
 
-function bind() {
-    
-}
+const bind = (fn, context, ...rest) => () => fn.call(context, ...rest);
 
 module.exports = bind;

@@ -3,7 +3,7 @@
     с методами для работы со списоком.
     Функция принимает 1 аргумент - начальное значение для списка (массив).
     Если значение не передано, то используется значение по умолчанию ([]).
-    
+
     У возвращаемого объекта должны быть следующие методы:
         * getLength() - возвращает длину списка
         * add(item) - добавляет элемент в список
@@ -32,8 +32,37 @@
     list.toString(); // 'b,c,z'
 */
 
-function createList() {
-    
+function createList(arr = []) {
+    return {
+        array: arr,
+        getLength() {
+            return this.array.length;
+        },
+        add(item) {
+            this.array.push(item);
+        },
+        get(index) {
+            return this.array[index];
+        },
+        set(index, item) {
+            this.array[index] = item
+        },
+        remove(item) {
+
+        }
+
+    }
+
+
 }
 
-module.exports = createList;
+let list = createList(['a', 'b', 'c']);
+
+console.log(list.getLength());
+list.add('d');
+console.log(list.getLength());
+console.log(list.get(2));
+list.set(3,'e');
+console.log(list.get(3));
+
+//module.exports = createList;

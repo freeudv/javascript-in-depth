@@ -16,8 +16,19 @@
     playGameLimited(); // undefined =(
 */
 
-function limit() {
-    
+function playGame() {
+    console.log('Playing game =)')
+}
+
+function limit(fn, n) {
+    let counter = n;
+
+    return function() {
+        if (counter < 1) return;
+
+        counter--;
+        return fn();
+    }
 }
 
 module.exports = limit;

@@ -19,8 +19,6 @@
     count(); // 3
 */
 
-function createCounter() {
-    
-}
+const createCounter = (counter = 0, step = 1) => () => (counter += step);
 
 module.exports = createCounter;
