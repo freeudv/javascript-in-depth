@@ -33,27 +33,27 @@
 */
 
 function createList(arr = []) {
-    return {
-        array: arr,
+    let array = arr;
 
+    return {
         getLength() {
-            return this.array.length;
+            return array.length;
         },
         add(item) {
-            this.array.push(item);
+            array.push(item);
         },
         get(index) {
-            return this.array[index];
+            return array[index];
         },
         set(index, item) {
-            this.array[index] = item;
+            array[index] = item;
         },
         remove(item) {
-            let index = this.array.indexOf(item);
-            if (index > -1) this.array.splice(index, 1);
+            let index = array.indexOf(item);
+            if (index > -1) array.splice(index, 1);
         },
         toString() {
-            return this.array.toString();
+            return array.toString();
         }
     }
 }
