@@ -35,6 +35,7 @@
 function createList(arr = []) {
     return {
         array: arr,
+
         getLength() {
             return this.array.length;
         },
@@ -45,24 +46,16 @@ function createList(arr = []) {
             return this.array[index];
         },
         set(index, item) {
-            this.array[index] = item
+            this.array[index] = item;
         },
         remove(item) {
-
+            let index = this.array.indexOf(item);
+            if (index > -1) this.array.splice(index, 1);
+        },
+        toString() {
+            return this.array.toString();
         }
-
     }
-
-
 }
 
-let list = createList(['a', 'b', 'c']);
-
-console.log(list.getLength());
-list.add('d');
-console.log(list.getLength());
-console.log(list.get(2));
-list.set(3,'e');
-console.log(list.get(3));
-
-//module.exports = createList;
+module.exports = createList;

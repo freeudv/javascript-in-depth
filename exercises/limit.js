@@ -16,18 +16,14 @@
     playGameLimited(); // undefined =(
 */
 
-function playGame() {
-    console.log('Playing game =)')
-}
-
 function limit(fn, n) {
     let counter = n;
 
-    return function() {
+    return function(...args) {
         if (counter < 1) return;
 
         counter--;
-        return fn();
+        return fn(...args);
     }
 }
 

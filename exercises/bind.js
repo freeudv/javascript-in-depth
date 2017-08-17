@@ -18,6 +18,6 @@
     printPerson(); // { firstname: 'Brendan', lastname: 'Eich' }
 */
 
-const bind = (fn, context, ...rest) => () => fn.call(context, ...rest);
+const bind = (fn, context, ...rest) => (...args) => fn.call(context, ...rest, ...args);
 
 module.exports = bind;
