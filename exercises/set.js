@@ -1,6 +1,7 @@
 const set = {
   items: {},
 
+<<<<<<< HEAD
   has(item) {
     return this.items.hasOwnProperty(item);
   },
