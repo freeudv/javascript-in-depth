@@ -5,8 +5,9 @@
  * - при вызове без `new` вернет глобальный объект
  */
 
-// ???
-
+function Character() {
+  return this;
+}
 
 /**
  * TODO:
@@ -15,11 +16,11 @@
  * - при вызове без `new` вернет объект не являющийся глобальный объектом
  */
 
-// ???
-
-
+function Warrior() {
+  return {};
+}
 
 module.exports = {
-    Character,
-    Warrior
+  Character,
+  Warrior
 };
