@@ -6,9 +6,10 @@
  * используя второй аргумент `Object.create`.
  */
 
-// ???
-
-
+const character = Object.create(Object.prototype, {
+  name: { value: "Benedict" },
+  hp: { value: 100 }
+});
 
 /**
  * TODO:
@@ -18,9 +19,9 @@
  * используя второй аргумент `Object.create`.
  */
 
-// ???
-
-
+const warrior = Object.create(character, {
+  weapon: { value: "Sword" }
+});
 
 /**
  * TODO:
@@ -30,12 +31,12 @@
  * используя второй аргумент `Object.create`.
  */
 
-// ???
-
-
+const knight = Object.create(warrior, {
+  mp: { value: 100 }
+});
 
 module.exports = {
-    character,
-    warrior,
-    knight
-}
+  character,
+  warrior,
+  knight
+};

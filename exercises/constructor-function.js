@@ -5,9 +5,10 @@
  * и свойство `hp` со значением 100.
  */
 
-// ???
-
-
+function Character(name) {
+  this.name = name;
+  this.hp = 100;
+}
 
 /**
  * TODO:
@@ -15,11 +16,9 @@
  * и поместите его в переменную `character`.
  */
 
-// ???
-
-
+const character = new Character("Benedict");
 
 module.exports = {
-    Character,
-    character
+  Character,
+  character
 };

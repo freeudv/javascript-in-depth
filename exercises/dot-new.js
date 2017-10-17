@@ -6,8 +6,10 @@
  * прототипом которого является `Character`.
  */
 
-// ???
-
-
+const Character = {
+  new() {
+    return Object.create(this);
+  }
+};
 
 module.exports = Character;
